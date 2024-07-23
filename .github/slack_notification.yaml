@@ -3,7 +3,7 @@ name: CI/CD Pipeline with Slack Notification
 on:
   push:
     branches:
-      - your-branch-name
+      - slack-branch
 
 jobs:
   build:
