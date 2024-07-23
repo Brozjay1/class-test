@@ -28,7 +28,7 @@ jobs:
       run: npm run deploy
 
     - name: Send Slack Notification
-      if: always()
+      if: always() # Ensures the notification is sent even if the previous steps fail
       run: |
         curl -X POST -H 'Content-type: application/json' \
         --data "{\"text\":\"Build ${{ job.status }} for branch ${{ github.ref }} in repository ${{ github.repository }}. Commit: ${{ github.sha }}.\"}" \
