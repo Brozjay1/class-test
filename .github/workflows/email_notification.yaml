@@ -42,5 +42,5 @@ jobs:
           Repository: ${{ github.repository }}
           Branch: ${{ github.ref }}
           Commit: ${{ github.sha }}
-        to: recipient@example.com
+        to: afolabiabayomijohn@gmail.com
         from: ${{ secrets.SMTP_USERNAME }}
