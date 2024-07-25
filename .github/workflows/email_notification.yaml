@@ -3,7 +3,7 @@ name: CI/CD Pipeline with Email Notification
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -35,11 +35,11 @@ jobs:
         server_port: ${{ secrets.SMTP_PORT }}
         username: ${{ secrets.SMTP_USERNAME }}
         password: ${{ secrets.SMTP_PASSWORD }}
-        subject: Build ${{ job.status }} - ${{ github.repository }}
+        subject: Build ${{ job.status }} - ${{ github.Brozjay1/class-test }}
         body: |
           The latest build has completed.
           Status: ${{ job.status }}
-          Repository: ${{ github.repository }}
+          Repository: ${{ github.Brozjay1/class-test }}
           Branch: ${{ github.ref }}
           Commit: ${{ github.sha }}
         to: afolabiabayomijohn@gmail.com
